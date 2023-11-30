@@ -27,15 +27,6 @@ const icons = [
       : "assets/icons/github.svg",
   },
   {
-    name: "ethereum",
-    link: "https://app.ens.domains/42piratas.eth",
-    icon: isBooks
-      ? "../../assets/icons/ethereum.svg"
-      : isPages
-      ? "../assets/icons/ethereum.svg"
-      : "assets/icons/ethereum.svg",
-  },
-  {
     name: "opensea",
     link: "https://opensea.io/aQ42piratas",
     icon: isBooks
@@ -54,13 +45,13 @@ const icons = [
       : "assets/icons/medium.svg",
   },
   {
-    name: "keybase",
-    link: "https://keybase.io/42piratas",
+    name: "chess",
+    link: "https://lichess.org/@/piratas42",
     icon: isBooks
-      ? "../../assets/icons/keybase.svg"
+      ? "../../assets/icons/chess.svg"
       : isPages
-      ? "../assets/icons/keybase.svg"
-      : "assets/icons/keybase.svg",
+      ? "../assets/icons/chess.svg"
+      : "assets/icons/chess.svg",
   },
   {
     name: "twitter",
