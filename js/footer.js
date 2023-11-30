@@ -11,6 +11,7 @@ const icons = [
   {
     name: "homepage",
     link: "/",
+    target: "_self",
     icon: isBooks
       ? "../../assets/icons/house-solid.svg"
       : isPages
@@ -43,7 +44,7 @@ const icons = [
       : isPages
       ? "../assets/icons/medium.svg"
       : "assets/icons/medium.svg",
-  },
+  }, 
   {
     name: "chess",
     link: "https://lichess.org/@/piratas42",
@@ -91,6 +92,7 @@ icons.forEach((icon) => {
   $icon.setAttribute("href", icon.link);
   $icon.setAttribute("title", icon.name);
   $icon.setAttribute("rel", "noopener noreferrer");
+  $icon.setAttribute("target", icon.target); // _blank or _self
   $icon.innerHTML = `<img src="${icon.icon}" alt="${icon.name}" />`;
   $boxIcons.appendChild($icon);
 });
