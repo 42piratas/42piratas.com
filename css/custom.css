@@ -1,0 +1,51 @@
+/* Texto selecionado com fundo laranja */
+::-moz-selection {
+  color: white;
+  background: #c0632e;
+}
+
+/* Firefox */
+::selection {
+  color: white;
+  background: #c0632e;
+}
+
+body,
+* {
+  cursor: none !important;
+}
+
+/* edição do cursor customizado */
+@media (hover: none) and (pointer: coarse) {
+  body,
+  * {
+    cursor: auto !important;
+  }
+  .custom_cursor.default {
+    display: none !important;
+  }
+}
+
+.custom_cursor {
+  width: 70px;
+  height: 70px;
+  border-radius: 0;
+  background-color: transparent;
+  background-image: url("../assets/icons/cursor-default.svg");
+  background-position: 120% 120%;
+  background-size: auto;
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  z-index: 999999999;
+}
+.custom_cursor.click {
+  background-image: url("../assets/icons/cursor-click.svg");
+  background-position: 59% 120%;
+  width: 55px;
+}
+.custom_cursor.write {
+  background-image: url("../assets/icons/cursor-write.svg");
+  background-position: 55% 55%;
+  height: 75px;
+}

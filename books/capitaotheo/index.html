@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if !IE]><!-->
+<html lang="en">
+  <head>
+    <script src="../../js/head.js" defer></script>
+    <meta charset="UTF-8" />
+    <title>âQ - Capitão Theo</title>
+    <script
+      type="text/javascript"
+      src="../../js/plugin_books/extras/jquery.min.1.7.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="../../js/plugin_books/extras/modernizr.2.5.3.min.js"
+    ></script>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../../css/custom.css" />
+  </head>
+  <body>
+    <div class="flipbook-viewport">
+      <div class="container">
+        <div class="flipbook"></div>
+      </div>
+    </div>
+
+    <button class="prevButton" onclick="prevPage()"><</button>
+    <button class="nextButton" onclick="nextPage()">></button>
+    <span class="custom_cursor default"></span>
+    <script src="../../js/custom_mouse.js"></script>
+    <footer></footer>
+    <script src="../../js/footer.js"></script>
+
+    <script>
+      const device = window.navigator.userAgent;
+      const isMobile = device.match(/(iPhone|iPod|iPad|Android|BlackBerry)/);
+
+      if (isMobile) {
+        document.querySelector(".prevButton").style.display = "none";
+        document.querySelector(".nextButton").style.display = "none";
+      }
+    </script>
+
+    <script type="text/javascript">
+      const divFlipbook = document.querySelector(".flipbook");
+      const totalPages = 15; // insert the total number of pages (images)
+
+      for (let i = 1; i <= totalPages; i++) {
+        if (i == 1 || i == totalPages) {
+          /* cover and back cover */
+          const div = document.createElement("div");
+          div.className = "page";
+          div.style.backgroundImage = `url(./pages/${i}.png)`;
+          divFlipbook.appendChild(div);
+        } else {
+          const div = document.createElement("div");
+          div.className = "double";
+          div.style.backgroundImage = `url(./pages/${i}.png)`;
+          divFlipbook.appendChild(div);
+        }
+      }
+
+      function nextPage() {
+        $(".flipbook").turn("next");
+      }
+
+      function prevPage() {
+        $(".flipbook").turn("previous");
+      }
+
+      function nextPage() {
+        $(".flipbook").turn("next");
+      }
+
+      function prevPage() {
+        $(".flipbook").turn("previous");
+      }
+
+      document.addEventListener("keydown", (event) => {
+        /* if you press to the right, active nextPage function */
+        if (event.keyCode == 39) {
+          nextPage();
+        }
+
+        /* if you press to the left, active nextPage function */
+        if (event.keyCode == 37) {
+          prevPage();
+        }
+      });
+
+      function loadApp() {
+        var flipbook = $(".flipbook");
+        if (flipbook.width() == 0 || flipbook.height() == 0) {
+          setTimeout(loadApp, 10);
+          return;
+        }
+
+        $(".flipbook .double").scissor();
+
+        // Create the flipbook
+
+        $(".flipbook").turn({
+          width: 922, // Define a largura desejada para o livro
+          height: 600, // Define a altura desejada para o livro
+          elevation: 50,
+          gradients: true,
+          autoCenter: true,
+        });
+      }
+
+      // Load the HTML4 version if there's not CSS transform
+
+      yepnope({
+        test: Modernizr.csstransforms,
+        yep: ["../../js/plugin_books/lib/turn.min.js"],
+        nope: ["../../js/plugin_books/lib/turn.html4.min.js"],
+        both: [
+          "../../js/plugin_books/lib/scissor.min.js",
+          "./css/double-page.css",
+        ],
+        complete: loadApp,
+      });
+    </script>
+  </body>
+</html>
