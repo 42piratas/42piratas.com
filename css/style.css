@@ -168,19 +168,19 @@ article > p:not(:first-child) {
 }
 
 #information p {
-  font-family: var(--font-primary);
+/*  font-family: var(--font-primary);*/
   margin-bottom: 1rem;
 }
 
 #information p a {
   color: var(--color-blue);
   text-decoration: underline;
-  font-family: var(--font-primary);
+/*  font-family: var(--font-primary);*/
 }
 
 #information p a:hover {
   text-decoration: line-through;
-  color: var(--font-secondary);
+  color: var(--color-orange);
 }
 
 /***********************/
