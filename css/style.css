@@ -27,7 +27,7 @@
 body {
   font-family: var(--font-primary);
   font-size: 1.1rem;
-  line-height: 1.75rem;
+  line-height: 2rem;
   color: var(--color-orange-light);
   background-color: var(--color-white);
 }
@@ -51,6 +51,7 @@ body {
   color: var(--color-orange);
   margin-bottom: 2rem;
   letter-spacing: 0.13rem;
+/*  line-height: 2rem;*/
 }
 .intro > a {
   color: var(--color-blue);
@@ -171,7 +172,8 @@ article > p:not(:first-child) {
   font-family: var(--font-primary);
   font-size: 1rem;
   margin-bottom: 1rem;
-  letter-spacing: 0.13rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.75rem;
 }
 
 #information p a {
