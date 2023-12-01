@@ -90,7 +90,6 @@ body {
 /************************/
 
 .bloco_de_listas {
-  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 .bloco_de_listas a {
@@ -170,9 +169,7 @@ article > p:not(:first-child) {
 
 #information p {
   font-family: var(--font-primary);
-  font-size: 1rem;
   margin-bottom: 1rem;
-  letter-spacing: 0.1rem;
 }
 
 #information p a {
@@ -299,7 +296,6 @@ footer .box-icons a:hover {
 /************************/
 
 @media screen and (min-width: 38rem) {
-  body { font-size: 1rem; }
   h1 { margin-bottom: 1rem; }
   main {
     margin: 4rem 2rem 0rem 6rem;
