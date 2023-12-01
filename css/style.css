@@ -27,7 +27,7 @@
 body {
   font-family: var(--font-primary);
   font-size: 1.1rem;
-  line-height: 2rem;
+  line-height: 1.75rem;
   color: var(--color-orange-light);
   background-color: var(--color-white);
 }
@@ -51,7 +51,7 @@ body {
   color: var(--color-orange);
   margin-bottom: 2rem;
   letter-spacing: 0.13rem;
-/*  line-height: 2rem;*/
+  line-height: 2rem;
 }
 .intro > a {
   color: var(--color-blue);
@@ -90,7 +90,7 @@ body {
 /************************/
 
 .bloco_de_listas {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 1.5rem;
 }
 .bloco_de_listas a {
@@ -173,7 +173,6 @@ article > p:not(:first-child) {
   font-size: 1rem;
   margin-bottom: 1rem;
   letter-spacing: 0.1rem;
-  line-height: 1.75rem;
 }
 
 #information p a {
