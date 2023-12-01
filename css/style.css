@@ -41,8 +41,8 @@ body {
   flex-direction: column;
   align-items: center;
   line-height: 2rem;
-  width: 30rem;
-  height: 20rem;
+/*  width: 30rem;*/
+  height: 25rem;
 }
 
 .intro {
@@ -66,22 +66,22 @@ body {
 /************************/
 
 #hero .heroHome {
-  width: 80%;
+  width: 100%;
   height: 100%;
   background-image: url("../img/hero-home.gif");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;
-  margin: 0 auto; 
+  background-position: left;   
 }
 
 #hero .heroAbout {
-  width: 80%;
+  width: 100%;
   height: 100%;
   background-image: url("../img/hero-about.gif");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
+  margin-bottom: 1.5rem;
 }
 
 /************************/
@@ -186,7 +186,7 @@ article > p:not(:first-child) {
 }
 
 /***********************/
-/****** FOOTER **********/
+/****** FOOTER *********/
 /***********************/
 
 footer {
@@ -297,27 +297,20 @@ footer .box-icons a:hover {
 /****** WEB *************/
 /************************/
 
-/* tamanho  da margin quando estiver acessando via mobile*/
-/* main {
-  margin: 2rem;
-  height: 100%;
-} */
-
 @media screen and (min-width: 38rem) {
   body { font-size: 1rem; }
   h1 { margin-bottom: 1rem; }
   main {
-    margin: 6rem 2rem 0rem 6rem;
+    margin: 4rem 2rem 0rem 6rem;
     max-width: 30rem;
   }
   #hero {
     width: 30rem;
-    height: 20rem;
+    height: 25rem;
     align-items: center;
   }
   #hero .heroHome {
-    width: 80%;
-    height: 100%;
+    width: 100%;
     background-image: url("../img/hero-home.gif");
     background-size: contain;
     background-position: left;
