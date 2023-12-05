@@ -41,7 +41,7 @@ body {
   flex-direction: column;
   align-items: center;
   line-height: 2rem;
-/*  width: 30rem;*/
+  /*  width: 30rem;*/
   height: 25rem;
 }
 
@@ -72,7 +72,7 @@ body {
   background-image: url("../img/hero-home.gif");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: left;   
+  background-position: left;
 }
 
 #hero .heroAbout {
@@ -168,14 +168,14 @@ article > p:not(:first-child) {
 }
 
 #information p {
-/*  font-family: var(--font-primary);*/
+  /*  font-family: var(--font-primary);*/
   margin-bottom: 1rem;
 }
 
 #information p a {
   color: var(--color-blue);
   text-decoration: underline;
-/*  font-family: var(--font-primary);*/
+  /*  font-family: var(--font-primary);*/
 }
 
 #information p a:hover {
@@ -196,10 +196,22 @@ footer {
   font-family: var(--font-primary);
 }
 
-footer > p { font-size: 0.8rem !important; margin-bottom: 0.75rem; }
-footer > p > a { color: var(--color-blue); text-decoration: underline; }
-footer > p > a:hover { text-decoration: line-through; color: var(--color-orange); }
-footer .box-icons { display: flex; gap: 0.5rem; }
+footer > p {
+  font-size: 0.8rem !important;
+  margin-bottom: 0.75rem;
+}
+footer > p > a {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+footer > p > a:hover {
+  text-decoration: line-through;
+  color: var(--color-orange);
+}
+footer .box-icons {
+  display: flex;
+  gap: 0.5rem;
+}
 
 footer .box-icons img {
   width: 1.5rem;
@@ -208,8 +220,13 @@ footer .box-icons img {
   background-color: var(--color-blue);
 }
 
-footer .box-icons img:hover { background-color: var(--color-orange); }
-footer .box-icons a { color: var(--color-blue); animation-play-state: paused; }
+footer .box-icons img:hover {
+  background-color: var(--color-orange);
+}
+footer .box-icons a {
+  color: var(--color-blue);
+  animation-play-state: paused;
+}
 
 footer .box-icons a:hover {
   text-decoration: line-through;
@@ -296,13 +313,15 @@ footer .box-icons a:hover {
 /************************/
 
 @media screen and (min-width: 38rem) {
-  h1 { margin-bottom: 1rem; }
+  h1 {
+    margin-bottom: 1rem;
+  }
   main {
     margin: 4rem 2rem 0rem 6rem;
     max-width: 30rem;
   }
   #hero {
-/*    width: 30rem;*/
+    /*    width: 30rem;*/
     height: 25rem;
     align-items: center;
   }
@@ -324,7 +343,30 @@ footer .box-icons a:hover {
     top: 40vh;
     right: 10%;
   }
-  article, footer { margin-bottom: 2rem; }
-  footer { font-size: 0.8rem; }
-  .ipfs-banner { font-size: 0.8rem; }
+  article,
+  footer {
+    margin-bottom: 2rem;
+  }
+  footer {
+    font-size: 0.8rem;
+  }
+  .ipfs-banner {
+    font-size: 0.8rem;
+  }
+}
+
+/* tratando o footer para telas com altura menores que 50rem */
+@media screen and (max-height: 50rem) {
+  footer {
+    margin: 1rem;
+    align-items: start !important;
+  }
+
+  footer > p {
+    display: none;
+  }
+
+  .box-icons {
+    flex-direction: column;
+  }
 }
