@@ -80,7 +80,6 @@ if (isBooks) {
   $footer.style.borderTop = "none";
   $footer.style.position = "fixed";
   $footer.style.bottom = "0";
-  $footer.style.width = "100%";
   $footer.style.alignItems = "start";
   $p.style.display = "none";
   $boxIcons.style.flexDirection = "column";
