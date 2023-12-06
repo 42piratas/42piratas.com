@@ -44,7 +44,7 @@ const icons = [
       : isPages
       ? "../assets/icons/medium.svg"
       : "assets/icons/medium.svg",
-  }, 
+  },
   {
     name: "chess",
     link: "https://lichess.org/@/piratas42",
@@ -76,14 +76,14 @@ $boxIcons.classList.add("box-icons");
 $footer.appendChild($boxIcons);
 
 if (isBooks) {
-  const $footer = document.querySelector("footer");
-  $footer.style.margin = "2rem";
+  $footer.style.margin = "1rem";
   $footer.style.borderTop = "none";
   $footer.style.position = "fixed";
   $footer.style.bottom = "0";
   $footer.style.width = "100%";
-  $footer.style.alignItems = "center";
-  $footer.style.removeProperty("margin");
+  $footer.style.alignItems = "start";
+  $p.style.display = "none";
+  $boxIcons.style.flexDirection = "column";
 }
 
 /* cria os ícones */

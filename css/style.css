@@ -356,7 +356,7 @@ footer .box-icons a:hover {
 }
 
 /* tratando o footer para telas com altura menores que 50rem */
-@media screen and (max-height: 50rem) {
+/* @media screen and (max-height: 50rem) {
   footer {
     margin: 1rem;
     align-items: start !important;
@@ -369,4 +369,4 @@ footer .box-icons a:hover {
   .box-icons {
     flex-direction: column;
   }
-}
+} */
