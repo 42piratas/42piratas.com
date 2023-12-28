@@ -30,8 +30,14 @@ body {
   line-height: 1.75rem;
   color: var(--color-orange-light);
   background-color: var(--color-white);
-  padding: 20px;
+  /* padding: 20px; */
 }
+
+main {
+  margin: 4rem 2rem 2rem 2rem;
+  max-width: 30rem;
+}
+
 
 /************************/
 /****** INTRO ***********/
@@ -40,20 +46,19 @@ body {
 #hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
   line-height: 2rem;
-  /*  width: 30rem;*/
   height: 25rem;
 }
 
 .intro {
   font-family: var(--font-secondary);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--color-orange);
   margin-bottom: 2rem;
   letter-spacing: 0.13rem;
   line-height: 2rem;
 }
+
 .intro > a {
   color: var(--color-blue);
   text-decoration: underline;
@@ -83,7 +88,7 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
-  margin-bottom: 1.5rem;
+/*  margin-bottom: 1.5rem;*/
 }
 
 /************************/
@@ -325,6 +330,11 @@ footer .box-icons a:hover {
     margin: 4rem 2rem 0rem 6rem;
     max-width: 30rem;
   }
+
+.intro {
+  font-size: 1.2rem;
+}
+
   #hero {
     /*    width: 30rem;*/
     height: 25rem;
