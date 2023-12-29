@@ -30,12 +30,14 @@ body {
   line-height: 1.75rem;
   color: var(--color-orange-light);
   background-color: var(--color-white);
+  /* padding: 20px; */
 }
 
 main {
   margin: 4rem 2rem 2rem 2rem;
   max-width: 30rem;
 }
+
 
 /************************/
 /****** INTRO ***********/
@@ -261,12 +263,13 @@ footer .box-icons a:hover {
 
 .ipfs-banner {
   /* display: none; */
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  padding: 0 2rem; 
-  margin: 1rem 2rem 0 0;
-  font-size: 0.7rem;
+  left: 0;
+  padding: 0 2rem;
+  margin: 1rem 2rem;
+  font-size: 0.8rem;
   text-align: center;
   border-radius: 1rem;
   background-color: var(--color-orange);
@@ -317,6 +320,9 @@ footer .box-icons a:hover {
 /************************/
 
 @media screen and (min-width: 38rem) {
+  body {
+    padding: 0px;
+  }
   h1 {
     margin-bottom: 1rem;
   }
@@ -360,6 +366,10 @@ footer .box-icons a:hover {
     font-size: 0.8rem;
   }
   .ipfs-banner {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
     font-size: 0.8rem;
   }
 }

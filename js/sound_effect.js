@@ -8,7 +8,7 @@ document.querySelectorAll("a").forEach((sl) => {
   audio1.innerHTML = isBooks
     ? `<source src="../assets/sounds/sound_hover.wav"; type="audio/wav">`
     : isPages
-    ? `<source src="../assets/sounds/sound_hover.wav"; type="audio/wav">`
+    ? `<source src="../../assets/sounds/sound_hover.wav"; type="audio/wav">`
     : `<source src="assets/sounds/sound_hover.wav"; type="audio/wav">`;
 
   const audio2 = document.createElement("audio");
@@ -17,7 +17,7 @@ document.querySelectorAll("a").forEach((sl) => {
   audio2.innerHTML = isBooks
     ? `<source src="../assets/sounds/sound_click.wav"; type="audio/wav">`
     : isPages
-    ? `<source src="../assets/sounds/sound_click.wav"; type="audio/wav">`
+    ? `<source src="../../assets/sounds/sound_click.wav"; type="audio/wav">`
     : `<source src="assets/sounds/sound_click.wav"; type="audio/wav">`;
 
   document.body.appendChild(audio1);

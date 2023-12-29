@@ -15,7 +15,7 @@ const icons = [
     icon: isBooks
       ? "../../assets/icons/house-solid.svg"
       : isPages
-      ? "../assets/icons/house-solid.svg"
+      ? "../../assets/icons/house-solid.svg"
       : "assets/icons/house-solid.svg",
   },
   {
@@ -24,7 +24,7 @@ const icons = [
     icon: isBooks
       ? "../../assets/icons/github.svg"
       : isPages
-      ? "../assets/icons/github.svg"
+      ? "../../assets/icons/github.svg"
       : "assets/icons/github.svg",
   },
   {
@@ -33,7 +33,7 @@ const icons = [
     icon: isBooks
       ? "../../assets/icons/opensea.svg"
       : isPages
-      ? "../assets/icons/opensea.svg"
+      ? "../../assets/icons/opensea.svg"
       : "assets/icons/opensea.svg",
   },
   {
@@ -42,7 +42,7 @@ const icons = [
     icon: isBooks
       ? "../../assets/icons/medium.svg"
       : isPages
-      ? "../assets/icons/medium.svg"
+      ? "../../assets/icons/medium.svg"
       : "assets/icons/medium.svg",
   },
   {
@@ -51,7 +51,7 @@ const icons = [
     icon: isBooks
       ? "../../assets/icons/chess.svg"
       : isPages
-      ? "../assets/icons/chess.svg"
+      ? "../../assets/icons/chess.svg"
       : "assets/icons/chess.svg",
   },
   {
@@ -60,7 +60,7 @@ const icons = [
     icon: isBooks
       ? "../../assets/icons/twitter.svg"
       : isPages
-      ? "../assets/icons/twitter.svg"
+      ? "../../assets/icons/twitter.svg"
       : "assets/icons/twitter.svg",
   },
 ];
