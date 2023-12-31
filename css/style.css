@@ -48,11 +48,12 @@ main {
   flex-direction: column;
   line-height: 2rem;
   height: 25rem;
+  margin-bottom: 1rem;
 }
 
 .intro {
   font-family: var(--font-secondary);
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--color-orange);
   margin-bottom: 2rem;
   letter-spacing: 0.13rem;
@@ -267,7 +268,7 @@ footer .box-icons a:hover {
   top: 0;
   right: 0;
   left: 0;
-  padding: 0 2rem;
+  padding: 0 1rem;
   margin: 1rem 2rem;
   font-size: 0.8rem;
   text-align: center;
@@ -339,6 +340,7 @@ footer .box-icons a:hover {
     /*    width: 30rem;*/
     height: 25rem;
     align-items: center;
+      margin-bottom: 0;
   }
   #hero .heroHome {
     width: 100%;
