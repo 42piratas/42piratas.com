@@ -2,14 +2,14 @@
 /****** RESET ***********/
 /************************/
 
-@import url("reset.min.css");
+@import url('reset.min.css');
 
 /************************/
 /****** FONTS ***********/
 /************************/
 
-@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@400&display=swap');
 
 /************************/
 /****** MAIN ************/
@@ -20,8 +20,8 @@
   --color-orange-light: #e1a583;
   --color-blue: #2eb0c0;
   --color-white: #fff;
-  --font-primary: "M PLUS Code Latin", monospace;
-  --font-secondary: "Special Elite", sans-serif;
+  --font-primary: 'M PLUS Code Latin', monospace;
+  --font-secondary: 'Special Elite', sans-serif;
 }
 
 body {
@@ -34,10 +34,9 @@ body {
 }
 
 main {
-  margin: 4rem 2rem 2rem 2rem;
+  margin: 2rem;
   max-width: 30rem;
 }
-
 
 /************************/
 /****** INTRO ***********/
@@ -60,13 +59,31 @@ main {
   line-height: 2rem;
 }
 
-.intro > a {
+.defaultLink {
   color: var(--color-blue);
   text-decoration: underline;
 }
-.intro > a:hover {
+.defaultLink:hover {
   text-decoration: line-through;
   color: var(--color-orange);
+}
+
+/************************/
+/**** NEW <a> STYLE *****/
+/************************/
+
+.secondLink {
+  color: var(--color-blue);
+  text-decoration: none;
+  box-shadow: 0 -0.25em 0 var(--color-blue) inset;
+  transition: none;
+}
+
+.secondLink:hover {
+  color: var(--color-orange);
+  text-decoration: none;
+  box-shadow: 0 -1.2em 0 var(--color-blue) inset;
+  transition: box-shadow 0.2s linear, color 0.25s linear;
 }
 
 /************************/
@@ -76,7 +93,7 @@ main {
 #hero .heroHome {
   width: 100%;
   height: 100%;
-  background-image: url("../img/hero-home.gif");
+  background-image: url('../img/hero-home.gif');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
@@ -85,11 +102,11 @@ main {
 #hero .heroAbout {
   width: 100%;
   height: 100%;
-  background-image: url("../img/hero-about.gif");
+  background-image: url('../img/hero-about.gif');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: left;
-/*  margin-bottom: 1.5rem;*/
+  /*  margin-bottom: 1.5rem;*/
 }
 
 /************************/
@@ -262,12 +279,13 @@ footer .box-icons a:hover {
 /****** BANNER IPFS *********/
 /****************************/
 
+.ipfs-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
 .ipfs-banner {
-  /* display: none; */
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   padding: 0 1rem;
   margin: 1rem 2rem;
   font-size: 0.8rem;
@@ -328,23 +346,23 @@ footer .box-icons a:hover {
     margin-bottom: 1rem;
   }
   main {
-    margin: 4rem 2rem 0rem 6rem;
+    margin: 2rem 2rem 0rem 6rem;
     max-width: 30rem;
   }
 
-.intro {
-  font-size: 1.2rem;
-}
+  .intro {
+    font-size: 1.2rem;
+  }
 
   #hero {
     /*    width: 30rem;*/
     height: 25rem;
     align-items: center;
-      margin-bottom: 0;
+    margin-bottom: 0;
   }
   #hero .heroHome {
     width: 100%;
-    background-image: url("../img/hero-home.gif");
+    background-image: url('../img/hero-home.gif');
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
@@ -368,10 +386,6 @@ footer .box-icons a:hover {
     font-size: 0.8rem;
   }
   .ipfs-banner {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: auto;
     font-size: 0.8rem;
   }
 }
