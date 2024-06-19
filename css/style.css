@@ -16,21 +16,21 @@
 /************************/
 
 :root {
-  --color-orange: #c0632e;
-  --color-orange-light: #e1a583;
-  --color-blue: #2eb0c0;
-  --color-white: #fff;
-  --font-primary: 'M PLUS Code Latin', monospace;
-  --font-secondary: 'Special Elite', sans-serif;
+    --color-orange: #c0632e;
+    --color-orange-light: #e1a583;
+    --color-blue: #2eb0c0;
+    --color-white: #fff;
+    --font-primary: "M PLUS Code Latin", monospace;
+    --font-secondary: "Special Elite", sans-serif;
 }
 
 body {
-  font-family: var(--font-primary);
-  font-size: 1.1rem;
-  line-height: 1.75rem;
-  color: var(--color-orange-light);
-  background-color: var(--color-white);
-  /* padding: 20px; */
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    line-height: 1.75rem;
+    color: var(--color-orange-light);
+    background-color: var(--color-white);
+    /* padding: 20px; */
 }
 
 main {
@@ -43,20 +43,20 @@ main {
 /************************/
 
 #hero {
-  display: flex;
-  flex-direction: column;
-  line-height: 2rem;
-  height: 25rem;
-  margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+    height: 25rem;
+    margin-bottom: 1rem;
 }
 
 .intro {
-  font-family: var(--font-secondary);
-  font-size: 1rem;
-  color: var(--color-orange);
-  margin-bottom: 2rem;
-  letter-spacing: 0.13rem;
-  line-height: 2rem;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    color: var(--color-orange);
+    margin-bottom: 2rem;
+    letter-spacing: 0.13rem;
+    line-height: 2rem;
 }
 
 .defaultLink {
@@ -90,22 +90,22 @@ main {
 /************************/
 
 #hero .heroHome {
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/hero-home.gif');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/hero-home.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
 }
 
 #hero .heroAbout {
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/hero-about.gif');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
-  /*  margin-bottom: 1.5rem;*/
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/hero-about.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+      /*  margin-bottom: 1.5rem;*/
 }
 
 #hero .hero42Labs {
@@ -122,23 +122,23 @@ main {
 /************************/
 
 .bloco_de_listas {
-  margin-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 .bloco_de_listas a {
-  color: var(--color-blue);
-  text-decoration: underline;
+    color: var(--color-blue);
+    text-decoration: underline;
 }
 .bloco_de_listas a:hover {
-  text-decoration: line-through;
-  color: var(--color-orange);
+    text-decoration: line-through;
+    color: var(--color-orange);
 }
 
 .bloco_de_listas h1 {
-  font-family: var(--font-secondary);
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  margin-bottom: 0.5rem;
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.5rem;
 }
 
 /************************/
@@ -146,18 +146,18 @@ main {
 /************************/
 
 .apresentacao-livro p {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
 .apresentacao-livro p a {
-  color: var(--color-blue);
-  text-decoration: none;
-  font-family: var(--font-secondary);
+    color: var(--color-blue);
+    text-decoration: none;
+    font-family: var(--font-secondary);
 }
 
 .apresentacao-livro p a:hover {
-  text-decoration: line-through;
-  color: var(--color-orange);
+    text-decoration: line-through;
+    color: var(--color-orange);
 }
 
 /************************/
@@ -165,30 +165,30 @@ main {
 /************************/
 
 .prevButton {
-  position: fixed;
-  width: 3.125rem;
-  height: 3.125rem;
-  transform: translateY(-50%);
-  border-radius: 50%;
-  border: none;
-  background-color: transparent;
-  color: var(--color-orange);
-  font-size: 3.5rem;
-  cursor: pointer;
-  z-index: 1;
+    position: fixed;
+    width: 3.125rem;
+    height: 3.125rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    color: var(--color-orange);
+    font-size: 3.5rem;
+    cursor: pointer;
+    z-index: 1;
 }
 
 .nextButton {
-  position: fixed;
-  width: 3.125rem;
-  height: 3.125rem;
-  transform: translateY(-50%);
-  border: none;
-  background-color: transparent;
-  color: var(--color-orange);
-  font-size: 3.5rem;
-  cursor: pointer;
-  z-index: 1;
+    position: fixed;
+    width: 3.125rem;
+    height: 3.125rem;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    color: var(--color-orange);
+    font-size: 3.5rem;
+    cursor: pointer;
+    z-index: 1;
 }
 
 /************************/
@@ -196,23 +196,23 @@ main {
 /************************/
 
 article > p:not(:first-child) {
-  margin-top: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 #information p {
-  /*  font-family: var(--font-primary);*/
-  margin-bottom: 1rem;
+    /*  font-family: var(--font-primary);*/
+    margin-bottom: 1rem;
 }
 
 #information p a {
-  color: var(--color-blue);
-  text-decoration: underline;
-  /*  font-family: var(--font-primary);*/
+    color: var(--color-blue);
+    text-decoration: underline;
+    /*  font-family: var(--font-primary);*/
 }
 
 #information p a:hover {
-  text-decoration: line-through;
-  color: var(--color-orange);
+    text-decoration: line-through;
+    color: var(--color-orange);
 }
 
 /***********************/
@@ -220,67 +220,67 @@ article > p:not(:first-child) {
 /***********************/
 
 footer {
-  border-top: 0.5px solid var(--color-orange-light);
-  margin: 2rem 0 0 0;
-  padding: 1rem 0 0 0;
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-primary);
+    border-top: 0.5px solid var(--color-orange-light);
+    margin: 2rem 0 0 0;
+    padding: 1rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-primary);
 }
 
 footer > p {
-  font-size: 0.8rem !important;
-  margin-bottom: 0.75rem;
+    font-size: 0.8rem !important;
+    margin-bottom: 0.75rem;
 }
 footer > p > a {
-  color: var(--color-blue);
-  text-decoration: underline;
+    color: var(--color-blue);
+    text-decoration: underline;
 }
 footer > p > a:hover {
-  text-decoration: line-through;
-  color: var(--color-orange);
+    text-decoration: line-through;
+    color: var(--color-orange);
 }
 footer .box-icons {
-  display: flex;
-  gap: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
 }
 
 footer .box-icons img {
-  width: 1.5rem;
-  height: 1.5rem;
-  padding: 0.4rem;
-  background-color: var(--color-blue);
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.4rem;
+    background-color: var(--color-blue);
 }
 
 footer .box-icons img:hover {
-  background-color: var(--color-orange);
+    background-color: var(--color-orange);
 }
 footer .box-icons a {
-  color: var(--color-blue);
-  animation-play-state: paused;
+    color: var(--color-blue);
+    animation-play-state: paused;
 }
 
 footer .box-icons a:hover {
-  text-decoration: line-through;
-  color: var(--color-orange);
-  animation: bounceFooterIcons 1s infinite;
+    text-decoration: line-through;
+    color: var(--color-orange);
+    animation: bounceFooterIcons 1s infinite;
 }
 
 /* animação de hover no footer */
 @keyframes bounceFooterIcons {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(2rem);
-  }
-  60% {
-    transform: translateY(1rem);
-  }
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(2rem);
+    }
+    60% {
+        transform: translateY(1rem);
+    }
 }
 
 /****************************/
@@ -305,20 +305,20 @@ footer .box-icons a:hover {
 }
 
 .ipfs-banner:hover {
-  animation: bounceBanner 0.5s;
-  background-color: var(--color-blue);
+    animation: bounceBanner 0.5s;
+    background-color: var(--color-blue);
 }
 
 @keyframes bounceBanner {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
 /****************************/
@@ -327,19 +327,19 @@ footer .box-icons a:hover {
 
 /* animação de hover no footer */
 @keyframes bounce {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(20px);
-  }
-  60% {
-    transform: translateY(10px);
-  }
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(20px);
+    }
+    60% {
+        transform: translateY(10px);
+    }
 }
 
 /************************/
@@ -347,20 +347,20 @@ footer .box-icons a:hover {
 /************************/
 
 @media screen and (min-width: 38rem) {
-  body {
-    padding: 0px;
-  }
-  h1 {
-    margin-bottom: 1rem;
-  }
-  main {
-    margin: 2rem 2rem 0rem 6rem;
-    max-width: 30rem;
-  }
+    body {
+        padding: 0px;
+    }
+    h1 {
+        margin-bottom: 1rem;
+    }
+    main {
+        margin: 2rem 2rem 0rem 6rem;
+        max-width: 30rem;
+    }
 
-  .intro {
-    font-size: 1.2rem;
-  }
+      .intro {
+          font-size: 1.2rem;
+      }
 
   #hero {
     /*    width: 30rem;*/
