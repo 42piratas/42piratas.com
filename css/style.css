@@ -75,14 +75,13 @@ main {
 .secondLink {
   color: var(--color-blue);
   text-decoration: none;
-  box-shadow: 0 -0.25em 0 var(--color-blue) inset;
+  box-shadow: 0 -0.25em 0 #ffe132 inset;
   transition: none;
 }
 
 .secondLink:hover {
-  color: var(--color-orange);
   text-decoration: none;
-  box-shadow: 0 -1.2em 0 var(--color-blue) inset;
+  box-shadow: 0 -1.2em 0 #ffe132 inset;
   transition: box-shadow 0.2s linear, color 0.25s linear;
 }
 
@@ -107,6 +106,15 @@ main {
   background-repeat: no-repeat;
   background-position: left;
   /*  margin-bottom: 1.5rem;*/
+}
+
+#hero .hero42Labs {
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/hero-home.gif'); /* alterar para a hero desejada */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left;
 }
 
 /************************/
