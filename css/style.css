@@ -73,7 +73,7 @@ main {
 /************************/
 
 .secondLink {
-  color: var(--color-blue);
+  color: var(--color-orange);
   text-decoration: none;
   box-shadow: 0 -0.25em 0 #ffe132 inset;
   transition: none;
