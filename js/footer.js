@@ -5,6 +5,7 @@ const $a = document.createElement("a");
 /* verifica se está na página dos livros */
 const isBooks = window.location.pathname.includes("books");
 const isPages = window.location.pathname.includes("pages");
+const labs = window.location.pathname.includes("42labs");
 
 /* array com os ícones */
 const icons = [
@@ -16,6 +17,8 @@ const icons = [
       ? "../../assets/icons/house-solid.svg"
       : isPages
       ? "../../assets/icons/house-solid.svg"
+      : labs
+      ? "../assets/icons/house-solid.svg"
       : "assets/icons/house-solid.svg",
   },
   {
@@ -25,6 +28,8 @@ const icons = [
       ? "../../assets/icons/github.svg"
       : isPages
       ? "../../assets/icons/github.svg"
+      : labs
+      ? "../assets/icons/github.svg"
       : "assets/icons/github.svg",
   },
   {
@@ -34,7 +39,9 @@ const icons = [
       ? "../../assets/icons/opensea.svg"
       : isPages
       ? "../../assets/icons/opensea.svg"
-      : "assets/icons/opensea.svg",
+      : labs
+      ? "../assets/icons/opensea.svg"
+      :"assets/icons/opensea.svg",
   },
   {
     name: "medium",
@@ -43,6 +50,8 @@ const icons = [
       ? "../../assets/icons/medium.svg"
       : isPages
       ? "../../assets/icons/medium.svg"
+      : labs
+      ? "../assets/icons/medium.svg"
       : "assets/icons/medium.svg",
   },
   {
@@ -52,6 +61,8 @@ const icons = [
       ? "../../assets/icons/chess.svg"
       : isPages
       ? "../../assets/icons/chess.svg"
+      : labs
+      ? "../assets/icons/chess.svg"
       : "assets/icons/chess.svg",
   },
   {
@@ -61,6 +72,8 @@ const icons = [
       ? "../../assets/icons/twitter.svg"
       : isPages
       ? "../../assets/icons/twitter.svg"
+      : labs
+      ? "../assets/icons/twitter.svg"
       : "assets/icons/twitter.svg",
   },
 ];

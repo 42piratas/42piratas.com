@@ -288,7 +288,7 @@ footer .box-icons a:hover {
 /****************************/
 
 .ipfs-block {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-end;
 }

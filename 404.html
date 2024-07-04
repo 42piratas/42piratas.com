@@ -16,6 +16,15 @@
     <script defer src="js/head.js"></script>
   </head>
   <style>
+    :root {
+      --color-orange: #c0632e;
+      --color-orange-light: #e1a583;
+      --color-blue: #2eb0c0;
+      --color-white: #fff;
+      --font-primary: 'M PLUS Code Latin', monospace;
+      --font-secondary: 'Special Elite', sans-serif;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -35,12 +44,13 @@
     }
 
     #wrap_404 > h1 {
-      color: #c0632e;
+      color: var(--color-orange);
       text-transform: uppercase;
-      font-family: 'Special Elite', sans-serif;
+      font-family: var(--font-secondary);
     }
+
     p {
-      color: #c0632e;
+      color: var(--color-orange);
       font-weight: 300;
       line-height: 150%;
     }
@@ -53,6 +63,37 @@
       height: 10em;
       margin: 2em 0 2em 0;
     }
+    /***********************/
+    /****** FOOTER *********/
+    /***********************/
+
+    footer > a > img {
+      width: 1.5rem;
+      height: 1.5rem;
+      padding: 0.4rem;
+      background-color: var(--color-blue);
+    }
+
+    footer > a > img:hover {
+      background-color: var(--color-orange);
+    }
+
+    /* animação de hover no footer */
+    @keyframes bounceFooterIcons {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(2rem);
+      }
+      60% {
+        transform: translateY(1rem);
+      }
+    }
   </style>
 
   <body>
@@ -64,6 +105,14 @@
       <p>our search is lonely</p>
       <p>a footprint left in pure snow</p>
       <p>blow into nothing</p>
+      <footer>
+        <a href="/" title="homepage" target="_self"
+          ><img
+            class="footerImage"
+            src="assets/icons/house-solid.svg"
+            alt="homepage"
+        /></a>
+      </footer>
     </div>
   </body>
 </html>
