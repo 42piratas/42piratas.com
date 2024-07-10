@@ -87,13 +87,6 @@ article {
   gap: 1em;
   margin-bottom: 2em;
 }
-h2 {
-  color: var(--color-blue);
-  border-bottom: 3px solid #ffe132;
-  line-height: 1.5em;
-  width: fit-content;
-  font-family: var(--font-secondary);
-}
 
 @media screen and (max-width: 800px) {
   .main {
@@ -103,9 +96,6 @@ h2 {
     flex-direction: column;
     gap: 1em;
     margin: 0;
-  }
-  h2 {
-    font-size: 1em;
   }
 }
 
