@@ -2,14 +2,14 @@
 /****** RESET ***********/
 /************************/
 
-@import url('reset.min.css');
+@import url("reset.min.css");
 
 /************************/
 /****** FONTS ***********/
 /************************/
 
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@400&display=swap");
 
 /************************/
 /****** MAIN ************/
@@ -34,8 +34,8 @@ body {
 }
 
 main {
-  margin: 2rem;
-  max-width: 30rem;
+    margin: 2rem;
+    max-width: 30rem;
 }
 
 /************************/
@@ -60,12 +60,12 @@ main {
 }
 
 .defaultLink {
-  color: var(--color-blue);
-  text-decoration: underline;
+    color: var(--color-blue);
+    text-decoration: underline;
 }
 .defaultLink:hover {
-  text-decoration: line-through;
-  color: var(--color-orange);
+    text-decoration: line-through;
+    color: var(--color-orange);
 }
 
 /************************/
@@ -73,16 +73,18 @@ main {
 /************************/
 
 .secondLink {
-  color: var(--color-orange);
-  text-decoration: none;
-  box-shadow: 0 -0.25em 0 #ffe132 inset;
-  transition: none;
+    color: var(--color-orange);
+    text-decoration: none;
+    box-shadow: 0 -0.25em 0 #ffe132 inset;
+    transition: none;
 }
 
 .secondLink:hover {
-  text-decoration: none;
-  box-shadow: 0 -1.2em 0 #ffe132 inset;
-  transition: box-shadow 0.2s linear, color 0.25s linear;
+    text-decoration: none;
+    box-shadow: 0 -1.2em 0 #ffe132 inset;
+    transition:
+        box-shadow 0.2s linear,
+        color 0.25s linear;
 }
 
 /************************/
@@ -101,20 +103,20 @@ main {
 #hero .heroAbout {
     width: 100%;
     height: 100%;
-    background-image: url('../img/hero-about.gif');
+    background-image: url("../img/hero-about.gif");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left;
-      /*  margin-bottom: 1.5rem;*/
+    /*  margin-bottom: 1.5rem;*/
 }
 
 #hero .hero42Labs {
-  width: 100%;
-  height: 100%;
-  background-image: url('../img/hero-home.gif'); /* alterar para a hero desejada */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/hero-home.gif"); /* alterar para a hero desejada */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
 }
 
 /************************/
@@ -288,20 +290,20 @@ footer .box-icons a:hover {
 /****************************/
 
 .ipfs-block {
-  display: none;
-  flex-direction: column;
-  align-items: flex-end;
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .ipfs-banner {
-  padding: 0 1rem;
-  margin: 1rem 2rem;
-  font-size: 0.8rem;
-  text-align: center;
-  border-radius: 1rem;
-  background-color: var(--color-orange);
-  color: var(--color-white);
-  text-decoration: none;
+    padding: 0 1rem;
+    margin: 1rem 2rem;
+    font-size: 0.8rem;
+    text-align: center;
+    border-radius: 1rem;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    text-decoration: none;
 }
 
 .ipfs-banner:hover {
@@ -354,48 +356,48 @@ footer .box-icons a:hover {
         margin-bottom: 1rem;
     }
     main {
-        margin: 2rem 2rem 0rem 6rem;
+        margin: 5rem 2rem 0rem 6rem;
         max-width: 30rem;
     }
 
-      .intro {
-          font-size: 1.2rem;
-      }
+    .intro {
+        font-size: 1.2rem;
+    }
 
-  #hero {
-    /*    width: 30rem;*/
-    height: 25rem;
-    align-items: center;
-    margin-bottom: 0;
-  }
-  #hero .heroHome {
-    width: 100%;
-    background-image: url('../img/hero-home.gif');
-    background-size: contain;
-    background-position: left;
-    background-repeat: no-repeat;
-    margin-bottom: 1.5rem;
-  }
-  .prevButton {
-    outline: none;
-    top: 40vh;
-    left: 10%;
-  }
-  .nextButton {
-    outline: none;
-    top: 40vh;
-    right: 10%;
-  }
-  article,
-  footer {
-    margin-bottom: 2rem;
-  }
-  footer {
-    font-size: 0.8rem;
-  }
-  .ipfs-banner {
-    font-size: 0.8rem;
-  }
+    #hero {
+        /*    width: 30rem;*/
+        height: 25rem;
+        align-items: center;
+        margin-bottom: 0;
+    }
+    #hero .heroHome {
+        width: 100%;
+        background-image: url("../img/hero-home.gif");
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+        margin-bottom: 1.5rem;
+    }
+    .prevButton {
+        outline: none;
+        top: 40vh;
+        left: 10%;
+    }
+    .nextButton {
+        outline: none;
+        top: 40vh;
+        right: 10%;
+    }
+    article,
+    footer {
+        margin-bottom: 2rem;
+    }
+    footer {
+        font-size: 0.8rem;
+    }
+    .ipfs-banner {
+        font-size: 0.8rem;
+    }
 }
 
 /* tratando o footer para telas com altura menores que 50rem */
