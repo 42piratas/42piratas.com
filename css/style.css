@@ -104,6 +104,11 @@ a:hover {
         color 0.25s linear;
 }
 
+#labs42 a.labs42assets {
+    color: var(--color-orange-light);
+}
+
+
 /************************/
 /****** INTRO ***********/
 /************************/
@@ -127,9 +132,9 @@ ul { margin-bottom: 2rem; }
 /****** 42LABS **********/
 /************************/
 
-#labs42container { max-width: 45rem; }
+#labs42container p { max-width: 45rem; }
 
-#labs42 { margin-bottom: 2rem; }
+#labs42 { margin-bottom: 0.75rem; }
 
 #labs42 p {
     color: var(--color-blue);
@@ -137,6 +142,12 @@ ul { margin-bottom: 2rem; }
     font-size: 0.9rem;
     line-height: 1.5rem;
 }
+
+#labs42 p.labs42assets {
+    margin-bottom: 0.75rem;
+}
+
+
 
 /************************/
 /** HERO IMAGES *********/
