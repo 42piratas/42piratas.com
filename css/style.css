@@ -61,6 +61,10 @@ h3 {
 /****** MAIN ************/
 /************************/
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: var(--font-primary);
     font-size: 1.1rem;
@@ -131,10 +135,6 @@ ul { margin-bottom: 2rem; }
 /************************/
 /****** 42LABS **********/
 /************************/
-
-#labs42container p { max-width: 45rem; }
-
-#labs42 { margin-bottom: 0.75rem; }
 
 #labs42 p {
     color: var(--color-blue);
@@ -228,6 +228,15 @@ ul { margin-bottom: 2rem; }
     font-size: 3.5rem;
     cursor: pointer;
     z-index: 1;
+}
+
+/***********************/
+/* HORIZONTAL LINE *****/
+/***********************/
+
+.horizontal-line {
+    border-top: 0.5px solid var(--color-orange-light);
+    margin: 3rem 0 3rem 0;
 }
 
 /***********************/
