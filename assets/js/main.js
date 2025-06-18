@@ -239,7 +239,7 @@ function playClickSound() {
     }
 }
 
-// Enhanced Interactions (keeping the same)
+// Enhanced Interactions - FIXED PROJECT BOX LINKS
 function initializeInteractions() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -266,33 +266,45 @@ function initializeInteractions() {
         box.setAttribute('role', 'button');
         box.setAttribute('aria-label', `View project: ${box.querySelector('.project-title')?.textContent || 'Project'}`);
 
+        // FIXED: Use data-url attribute instead of looking for href
         box.addEventListener('keydown', function(e) {
             if (e.key === 'Enter' || e.key === ' ') {
                 e.preventDefault();
-                const link = box.querySelector('.project-title');
-                if (link) {
+                const projectUrl = box.getAttribute('data-url');
+                if (projectUrl) {
                     playClickSound();
                     box.style.transform = 'scale(0.98)';
                     setTimeout(() => {
                         box.style.transform = '';
-                        window.open(link.href, '_blank');
+                        window.open(projectUrl, '_blank');
                     }, 100);
                 }
             }
         });
 
+        // FIXED: Use data-url attribute instead of looking for href
         box.addEventListener('click', function(e) {
             if (e.target === box || (e.target.closest('.project-box') === box && !e.target.closest('a'))) {
-                const link = box.querySelector('.project-title');
-                if (link) {
+                const projectUrl = box.getAttribute('data-url');
+                if (projectUrl) {
                     playClickSound();
-                    window.open(link.href, '_blank');
+                    window.open(projectUrl, '_blank');
+                } else {
+                    console.log('❌ No data-url found for project box:', box);
                 }
             }
         });
     });
 
     document.body.classList.add('loaded');
+
+    // Debug project boxes after initialization
+    console.log('🎯 Project boxes initialized:', projectBoxes.length);
+    projectBoxes.forEach((box, index) => {
+        const url = box.getAttribute('data-url');
+        const title = box.querySelector('.project-title')?.textContent;
+        console.log(`📦 Project ${index + 1}: "${title}" -> ${url}`);
+    });
 }
 
 function optimizeImages() {
