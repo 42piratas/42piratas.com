@@ -18,14 +18,106 @@
 
     <!-- External CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+    <!-- Local Font Awesome with CDN fallback -->
+    <link rel="preload" href="./assets/icons/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="./assets/icons/fontawesome/css/all.min.css"></noscript>
+    <!-- CDN Fallback for Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'; this.onload=null;">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body class="bg-white overflow-x-hidden">
+    <!-- About Overlay -->
+    <div id="about-overlay" class="about-overlay">
+        <div class="about-content">
+            <!-- Close Button -->
+            <button id="close-about" class="about-close" aria-label="Close about section">
+                <i class="fas fa-rectangle-xmark"></i>
+            </button>
+
+            <!-- Main Container -->
+            <div class="max-w-[1000px] mx-auto px-8 h-full flex items-center">
+                <div class="w-full grid grid-cols-1 lg:grid-cols-10 gap-10 py-16">
+                    <!-- Left Column - 70% - Text Content -->
+                    <div class="lg:col-span-7 about-text">
+                        <div class="about-text-content">
+                            <p>
+                                Ânderson stands for
+                                <a href="https://www.mozilla.org/en-US/about/manifesto/">decentralization</a>,
+                                <a href="https://en.wikipedia.org/wiki/Free-culture_movement">free-culture</a>,
+                                <a href="https://archive.org/stream/GuerillaOpenAccessManifesto/Goamjuly2008_djvu.txt">information open access</a>, and
+                                <a href="https://en.wikipedia.org/wiki/Global_citizenship">global citizenship</a>,
+                                and he is a bit obsessed with social contracts.
+                            </p>
+
+                            <p>AKASHA Foundation full-time adventurer. Contributor Mozilla, Ubuntu, and Tor Project, among others. VOTEgpt creator.</p>
+
+                            <p>
+                                Creator of the table games Peleia, Figo, Inception, The Looter and the Watchman, x-Chess, and
+                                Parallel Echoes; and the Scratch game Paper Dungeons.
+                            </p>
+
+                            <p>
+                                Editor of Pedro Pirata and Ilha dos Ninjas, children's books.
+                                Co-author, alongside his 8-y.o. nephew, of Capitão Théo. Author of
+                                Coddiwomple, a collection of haikulikes, Nonada, microfiction,
+                                and Alex e o ET, a story for children.
+                            </p>
+
+                            <p>
+                                Previously: USPA skydiving instructor; PADI Scuba Diver Master Trainer; Ocean Quest Coral Reef Rehabilitation instructor;
+                                Project AWARE Ocean Conservation instructor; IPF Brazil/RS Chapter Technical Director; TEDxLaçador co-organizer; PMI
+                                REP Instructor and Consultant; InfoQ Brazil Editor; Solutions Consultant IBM, Oracle, Bizagi, and Orquestra;
+                                Contributor Scrum Alliance, PMI Global, PMI-RS, MARKET Protocol, Hacker Noon, DZone, Webinsider, and InfoQ.
+                            </p>
+
+                            <p>
+                                An early advocate of distributed teams,
+                                <del>he has been working remotely for over a decade.</del>
+                                He is from Porto Alegre (BR), but these days he has been based in
+                                <del>Bombinhas(BR) DeLand(US) Taft(US) Fano(IT) Pattaya(TH)
+                                    Phuket(TH) Bucharest(RO) Barcelona(ES) Cape Town(ZA)
+                                    Saint Petersburg(RU) Barcelona(ES) DeLand(US) Balneário
+                                    Camboriú(BR) Garopaba(BR) Lake Elsinore(US) Santos(BR)
+                                    Praia Brava(BR) Bucharest(RO)</del>
+                                Flops (BR).
+                            </p>
+
+                            <p>
+                                He is always up to grab a coffee to talk about anything,
+                                from systems thinking to graphic novels - so
+                                feel free to drop him a line at:
+                                <span class="about-small-text">ANDERSON[AT][THISWEBSITESDOMAIN]</span>
+                            </p>
+                            <p>
+                                PGP Fingerprint:
+                                <span class="about-small-text">A6A3 440F A1BF 4064 781B 9F8B BFDD 95DD C2B5 A111</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - 30% - Photos -->
+                    <div class="lg:col-span-3 about-photos">
+                        <div class="space-y-6">
+                            <img src="/assets/img/42p-about-1.png"
+                                 alt="Anderson wingsuit flying"
+                                 class="w-full object-cover">
+                            <img src="/assets/img/42p-about-2.png"
+                                 alt="Anderson wingsuit flying"
+                                 class="w-full object-cover">
+                            <img src="/assets/img/42p-about-3.png"
+                                 alt="Anderson wingsuit flying"
+                                 class="w-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="max-w-[1000px] mx-auto px-8 flex-grow" style="padding-top: 64px; padding-bottom: 16px;">
         <!-- INTRO Section -->
         <section class="intro-section flex items-center gap-12">
@@ -41,6 +133,7 @@
                     <a href="https://www.mozilla.org/en-US/about/manifesto/" class="hero-link">Decentralized Internet</a> and a
                     <a href="https://www.eff.org/cyberspace-independence" class="hero-link">Better Home of Mind</a> at the
                     <a href="https://akasha.org/" class="hero-link">AKASHA Foundation</a>. He also actively contributes to multiple initiatives, besides teaching, writing, drawing, crafting, coding, and organizing random things.
+                    <a href="#" id="about-link" class="hero-link"><span style="font-size: 1.1rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;">MORE</span></a>
                 </p>
             </div>
         </section>
@@ -48,18 +141,8 @@
         <!-- PROJECTS Section -->
         <section class="projects-section" style="margin-top: 24px; margin-bottom: 0px;">
             <div class="grid grid-cols-2 gap-4">
-                <!-- Project Box 1: Alex e o ET -->
-                <div class="project-box" data-url="https://archive.org/details/alex-e-o-et/">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-child text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Alex e o ET</h3>
-                    </div>
-                    <p class="project-description">
-                        Uma amizade inesperada floresce entre um menino e um novo amigo, explorando a curiosidade, a compreensão e a superação de diferenças.
-                    </p>
-                </div>
 
-                <!-- Project Box 2: Nonada -->
+                <!-- Project Box: Nonada -->
                 <div class="project-box" data-url="https://archive.org/details/nonada">
                     <div class="flex items-center gap-3 mb-2">
                         <i class="fas fa-book text-xl project-icon" style="margin-bottom: 0;"></i>
@@ -70,62 +153,7 @@
                     </p>
                 </div>
 
-                <!-- Project Box 3: Everywhere is good where we arent -->
-                <div class="project-box" data-url="https://42piratas.medium.com/everywhere-is-good-where-we-arent-0dd24e6ae521">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-pen-to-square text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Everywhere is good where we arent</h3>
-                    </div>
-                    <p class="project-description">
-                        And so we split ourselves between the person we are and the person we think we'd become somewhere else, never whole in either place.
-                    </p>
-                </div>
-
-                <!-- Project Box 4: VoteGPT -->
-                <div class="project-box" data-url="https://votegpt.io/">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-code text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">VoteGPT</h3>
-                    </div>
-                    <p class="project-description">
-                        Open-source AI that cuts through election noise—get unbiased candidate info without the spin, so you can vote with clarity instead of confusion.
-                    </p>
-                </div>
-
-                <!-- Project Box 5: Wabi-Sabi -->
-                <div class="project-box" data-url="https://42piratas.medium.com/wabi-sabi-c6d83f912029">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-pen-to-square text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Wabi-Sabi</h3>
-                    </div>
-                    <p class="project-description">
-                        The gentle art of embracing what's broken, temporary, and beautifully imperfect in a world obsessed with flawless surfaces.
-                    </p>
-                </div>
-
-                <!-- Project Box 6: BTC Pizza Day BUC -->
-                <div class="project-box" data-url="https://www.meetup.com/akasha-hub-bucharest/events/300925795/">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-champagne-glasses text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">BTC Pizza Day BUC</h3>
-                    </div>
-                    <p class="project-description">
-                        Beyond the pizza hype — discussing how open, secure, decentralized systems can transform social change and community building.
-                    </p>
-                </div>
-
-                <!-- Project Box 7: Capitão Theo -->
-                <div class="project-box" data-url="https://archive.org/details/capitao-theo/">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-child text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Capitão Theo</h3>
-                    </div>
-                    <p class="project-description">
-                        Escrito por Pedro Q. aos 8 anos de idade, e seu tio Ânderson. Para crianças de 0 a 3 anos, conta as aventuras de Théo, irmão de Pedro.
-                    </p>
-                </div>
-
-                <!-- Project Box 8: Coddiwomple -->
+                <!-- Project Box: Coddiwomple -->
                 <div class="project-box" data-url="https://archive.org/details/coddiwomple/">
                     <div class="flex items-center gap-3 mb-2">
                         <i class="fas fa-book text-xl project-icon" style="margin-bottom: 0;"></i>
@@ -136,106 +164,29 @@
                     </p>
                 </div>
 
-                <!-- Project Box 9: Parallel Echoes -->
-                <div class="project-box" data-url="https://42piratas.itch.io/parallel-echoes">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Parallel Echoes</h3>
-                    </div>
-                    <p class="project-description">
-                        A solo journaling RPG blending self-analysis and magical thinking, playing out a real-life inspired mystery with dice, Tarot, and journaling.
-                    </p>
-                </div>
-
-                <!-- Project Box 10: Peleia -->
-                <div class="project-box" data-url="https://boardgamegeek.com/boardgame/375863/peleia">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Peleia</h3>
-                    </div>
-                    <p class="project-description">
-                        A variant of Stratego, with typical characters from southern Brazil. It also introduces elements such as cards and dice, and it's played with an 8x10 board.
-                    </p>
-                </div>
-
-                <!-- Project Box 11: TEDxCities -->
-                <div class="project-box" data-url="https://www.ted.com/tedx/events/927">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-champagne-glasses text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">TEDxCities</h3>
-                    </div>
-                    <p class="project-description">
-                        TEDxLaçador featuring visionaries, engineers, and social activists discussing urban development and inequality.
-                    </p>
-                </div>
-
-                <!-- Project Box 12: Paper Dungeons -->
-                <div class="project-box" data-url="https://scratch.mit.edu/projects/787895762/">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-gamepad text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Paper Dungeons</h3>
-                    </div>
-                    <p class="project-description">
-                        How many dungeon rooms can you go through within 60 seconds? How many enemies can you catch? How many coins can you collect? A Scratch game.
-                    </p>
-                </div>
-
-                <!-- Project Box 13: The Looter & The Watchman -->
-                <div class="project-box" data-url="https://boardgamegeek.com/boardgame/375943/the-looter-and-the-watchman">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">The Looter & The Watchman</h3>
-                    </div>
-                    <p class="project-description">
-                        A rule-light 2P PvP game that can be easily expanded and carried around — all you need is an A5-size board and a handful of dice.
-                    </p>
-                </div>
-
-                <!-- Project Box 14: Inception -->
-                <div class="project-box" data-url="https://boardgamegeek.com/boardgame/375733/inception">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Inception</h3>
-                    </div>
-                    <p class="project-description">
-                        Rule-light, easy-to-carry PnP PvP puzzle that can be played within different timeframes, according to the different scenarios.
-                    </p>
-                </div>
-
-                <!-- Project Box 15: X-Chess: The First Mutant -->
-                <div class="project-box" data-url="https://boardgamegeek.com/boardgameexpansion/376146/x-chess-the-first-mutant">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">X-Chess: The First Mutant</h3>
-                    </div>
-                    <p class="project-description">
-                        Chess gets a mutation — introducing the 'Mutant' piece that moves like both knight and bishop on a compact board that changes everything you know.
-                    </p>
-                </div>
-
-                <!-- Project Box 16: Figo -->
-                <div class="project-box" data-url="https://boardgamegeek.com/boardgame/375939/figo">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Figo</h3>
-                    </div>
-                    <p class="project-description">
-                        When you're jumping out of planes for fun, you need a party game that matches your appetite for chaos: funny, brutal, and completely unhinged.
-                    </p>
-                </div>
-
-                <!-- Project Box 17: Pedro Pirata -->
-                <div class="project-box" data-url="https://archive.org/details/pedropirata/">
+                <!-- Project Box: Alex e o ET -->
+                <div class="project-box" data-url="https://archive.org/details/alex-e-o-et/">
                     <div class="flex items-center gap-3 mb-2">
                         <i class="fas fa-child text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Pedro Pirata</h3>
+                        <h3 class="project-title" style="margin-bottom: 0;">Alex e o ET</h3>
                     </div>
                     <p class="project-description">
-                        Com texto de David e edição de Ânderson, Pedro Pirata conta a história de Pedro Pirata, o destemido capitão dos Sete Mares, em busca por Little Dino.
+                        Uma amizade inesperada floresce entre um menino e um novo amigo, explorando a curiosidade, a compreensão e a superação de diferenças.
                     </p>
                 </div>
 
-                <!-- Project Box 18: Ilha dos Ninjas -->
+                <!-- Project Box: Capitão Théo -->
+                <div class="project-box" data-url="https://archive.org/details/capitao-theo/">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-child text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">Capitão Théo</h3>
+                    </div>
+                    <p class="project-description">
+                        Escrito por Pedro Q. aos 8 anos de idade, e seu tio Ânderson. Para crianças de 0 a 3 anos, conta as aventuras de Théo, irmão de Pedro.
+                    </p>
+                </div>
+
+                <!-- Project Box: Ilha dos Ninjas -->
                 <div class="project-box" data-url="https://archive.org/details/ilhadosninjas/">
                     <div class="flex items-center gap-3 mb-2">
                         <i class="fas fa-child text-xl project-icon" style="margin-bottom: 0;"></i>
@@ -246,29 +197,128 @@
                     </p>
                 </div>
 
-                <!-- Project Box 19: BTC Pizza Day BCN -->
-                <div class="project-box" data-url="https://www.meetup.com/akashabarcelona/events/293493051/">
+                <!-- Project Box: Pedro Pirata -->
+                <div class="project-box" data-url="https://archive.org/details/pedropirata/">
                     <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-champagne-glasses text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">BTC Pizza Day BCN</h3>
+                        <i class="fas fa-child text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">Pedro Pirata</h3>
                     </div>
                     <p class="project-description">
-                        Celebrating decentralization and transparency while exploring blockchain's power to reshape how we create real social impact.
+                        Com texto de David e edição de Ânderson, Pedro Pirata conta a história de Pedro Pirata, o destemido capitão dos Sete Mares, em busca por Little Dino.
                     </p>
                 </div>
 
-                <!-- Project Box 20: ETH Devs Meetup -->
-                <div class="project-box" data-url="https://www.meetup.com/ethereumbcn/events/254404218/">
+                <!-- Project Box: Everywhere is good where we arent -->
+                <div class="project-box" data-url="https://42piratas.medium.com/everywhere-is-good-where-we-arent-0dd24e6ae521">
                     <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-champagne-glasses text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">ETH Devs Meetup</h3>
+                        <i class="fas fa-pen-to-square text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">Everywhere is good where we arent</h3>
                     </div>
                     <p class="project-description">
-                        Ethereum developer meetup in Barcelona fostering community, knowledge sharing, and collaboration among blockchain developers and enthusiasts.
+                        And so we split ourselves between the person we are and the person we think we'd become somewhere else, never whole in either place.
                     </p>
                 </div>
 
-                <!-- Project Box 21: Hamlet -->
+                <!-- Project Box: >Wabi-Sabi -->
+                <div class="project-box" data-url="https://42piratas.medium.com/wabi-sabi-c6d83f912029">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-pen-to-square text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">Wabi-Sabi</h3>
+                    </div>
+                    <p class="project-description">
+                        The gentle art of embracing what's broken, temporary, and beautifully imperfect in a world obsessed with flawless surfaces.
+                    </p>
+                </div>
+
+                <!-- Project Box: Parallel Echoes -->
+                <div class="project-box" data-url="https://42piratas.itch.io/parallel-echoes">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">Parallel Echoes</h3>
+                    </div>
+                    <p class="project-description">
+                        A solo journaling RPG blending self-analysis and magical thinking, playing out a real-life inspired mystery with dice, Tarot, and journaling.
+                    </p>
+                </div>
+
+                <!-- Project Box: Peleia -->
+                <div class="project-box" data-url="https://boardgamegeek.com/boardgame/375863/peleia">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">Peleia</h3>
+                    </div>
+                    <p class="project-description">
+                        A variant of Stratego, with typical characters from southern Brazil. It also introduces elements such as cards and dice, and it's played with an 8x10 board.
+                    </p>
+                </div>
+
+                <!-- Project Box: Inception -->
+                <div class="project-box" data-url="https://boardgamegeek.com/boardgame/375733/inception">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">Inception</h3>
+                    </div>
+                    <p class="project-description">
+                        Rule-light, easy-to-carry PnP PvP puzzle that can be played within different timeframes, according to the different scenarios.
+                    </p>
+                </div>
+
+                <!-- Project Box: The Looter & The Watchman -->
+                <div class="project-box" data-url="https://boardgamegeek.com/boardgame/375943/the-looter-and-the-watchman">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">The Looter & The Watchman</h3>
+                    </div>
+                    <p class="project-description">
+                        A rule-light 2P PvP game that can be easily expanded and carried around — all you need is an A5-size board and a handful of dice.
+                    </p>
+                </div>
+
+                <!-- Project Box: X-Chess -->
+                <div class="project-box" data-url="https://boardgamegeek.com/boardgameexpansion/376146/x-chess-the-first-mutant">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">X-Chess: The First Mutant</h3>
+                    </div>
+                    <p class="project-description">
+                        Chess gets a mutation — introducing the 'Mutant' piece that moves like both knight and bishop on a compact board that changes everything you know.
+                    </p>
+                </div>
+
+                <!-- Project Box: Figo -->
+                <div class="project-box" data-url="https://boardgamegeek.com/boardgame/375939/figo">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-dice-six text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">Figo</h3>
+                    </div>
+                    <p class="project-description">
+                        When you're jumping out of planes for fun, you need a party game that matches your appetite for chaos: funny, brutal, and completely unhinged.
+                    </p>
+                </div>
+
+                <!-- Project Box: Paper Dungeons -->
+                <div class="project-box" data-url="https://scratch.mit.edu/projects/787895762/">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-gamepad text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">Paper Dungeons</h3>
+                    </div>
+                    <p class="project-description">
+                        How many dungeon rooms can you go through within 60 seconds? How many enemies can you catch? How many coins can you collect? A Scratch game.
+                    </p>
+                </div>
+
+                <!-- Project Box: VoteGPT -->
+                <div class="project-box" data-url="https://votegpt.vercel.app/">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-code text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">VoteGPT</h3>
+                    </div>
+                    <p class="project-description">
+                        Open-source AI that cuts through election noise—get unbiased candidate info without the spin, so you can vote with clarity instead of confusion.
+                    </p>
+                </div>
+
+                <!-- Project Box: Hamlet -->
                 <div class="project-box" data-url="https://hamlet-nltk.vercel.app/">
                     <div class="flex items-center gap-3 mb-2">
                         <i class="fas fa-code text-xl project-icon" style="margin-bottom: 0;"></i>
@@ -279,18 +329,7 @@
                     </p>
                 </div>
 
-                <!-- Project Box 22: Yo Thanks! -->
-                <div class="project-box" data-url="https://github.com/42piratas/yothanks">
-                    <div class="flex items-center gap-3 mb-2">
-                        <i class="fas fa-code text-xl project-icon" style="margin-bottom: 0;"></i>
-                        <h3 class="project-title" style="margin-bottom: 0;">Yo Thanks!</h3>
-                    </div>
-                    <p class="project-description">
-                        When your project grows faster than your ability to say thanks — automated appreciation emails that keep the human touch in open source collaboration.
-                    </p>
-                </div>
-
-                <!-- Project Box 23: Boomerang -->
+                <!-- Project Box: Boomerang -->
                 <div class="project-box" data-url="https://github.com/42piratas/teamreporter">
                     <div class="flex items-center gap-3 mb-2">
                         <i class="fas fa-code text-xl project-icon" style="margin-bottom: 0;"></i>
@@ -301,7 +340,62 @@
                     </p>
                 </div>
 
-                <!-- Project Box 24: TEDxSaloon -->
+                <!-- Project Box: Yo Thanks -->
+                <div class="project-box" data-url="https://github.com/42piratas/yothanks">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-code text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">Yo Thanks!</h3>
+                    </div>
+                    <p class="project-description">
+                        When your project grows faster than your ability to say thanks — automated appreciation emails that keep the human touch in open source collaboration.
+                    </p>
+                </div>
+
+               <!-- Project Box: BTC Pizza Day BUC -->
+                <div class="project-box" data-url="https://www.meetup.com/akasha-hub-bucharest/events/300925795/">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-champagne-glasses text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">BTC Pizza Day BUC</h3>
+                    </div>
+                    <p class="project-description">
+                        Beyond the pizza hype — discussing how open, secure, decentralized systems can transform social change and community building.
+                    </p>
+                </div>
+
+                <!-- Project Box: BTC Pizza Day BCN -->
+                <div class="project-box" data-url="https://www.meetup.com/akashabarcelona/events/293493051/">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-champagne-glasses text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">BTC Pizza Day BCN</h3>
+                    </div>
+                    <p class="project-description">
+                        Celebrating decentralization and transparency while exploring blockchain's power to reshape how we create real social impact.
+                    </p>
+                </div>
+
+                <!-- Project Box: ETH Devs Meetup -->
+                <div class="project-box" data-url="https://www.meetup.com/ethereumbcn/events/254404218/">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-champagne-glasses text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">ETH Devs Meetup</h3>
+                    </div>
+                    <p class="project-description">
+                        Ethereum developer meetup in Barcelona fostering community, knowledge sharing, and collaboration among blockchain developers and enthusiasts.
+                    </p>
+                </div>
+
+                <!-- Project Box: TEDxCities -->
+                <div class="project-box" data-url="https://www.ted.com/tedx/events/927">
+                    <div class="flex items-center gap-3 mb-2">
+                        <i class="fas fa-champagne-glasses text-xl project-icon" style="margin-bottom: 0;"></i>
+                        <h3 class="project-title" style="margin-bottom: 0;">TEDxCities</h3>
+                    </div>
+                    <p class="project-description">
+                        TEDxLaçador featuring visionaries, engineers, and social activists discussing urban development and inequality.
+                    </p>
+                </div>
+
+                <!-- Project Box: TEDxSaloon -->
                 <div class="project-box" data-url="https://www.ted.com/tedx/events/3548">
                     <div class="flex items-center gap-3 mb-2">
                         <i class="fas fa-champagne-glasses text-xl project-icon" style="margin-bottom: 0;"></i>
@@ -312,7 +406,7 @@
                     </p>
                 </div>
 
-                <!-- Project Box 25: TEDxWomen -->
+                <!-- Project Box: TEDxWomen -->
                 <div class="project-box" data-url="https://www.ted.com/tedx/events/1196">
                     <div class="flex items-center gap-3 mb-2">
                         <i class="fas fa-champagne-glasses text-xl project-icon" style="margin-bottom: 0;"></i>

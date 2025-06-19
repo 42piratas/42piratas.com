@@ -1,13 +1,79 @@
 // Main JavaScript for 42piratas website
-// Exact cursor implementation matching live website
+// Exact cursor implementation matching live website + About Overlay
 
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize all features
     initializeCustomCursor();
     initializeSounds();
     initializeInteractions();
+    initializeAboutOverlay();
     optimizeImages();
 });
+
+// About Overlay Functionality
+function initializeAboutOverlay() {
+    const aboutLink = document.getElementById('about-link');
+    const aboutOverlay = document.getElementById('about-overlay');
+    const closeButton = document.getElementById('close-about');
+
+    if (aboutLink && aboutOverlay && closeButton) {
+        // Open overlay
+        aboutLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            openAboutOverlay();
+        });
+
+        // Close overlay
+        closeButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeAboutOverlay();
+        });
+
+        // Close on overlay background click
+        aboutOverlay.addEventListener('click', function(e) {
+            if (e.target === aboutOverlay) {
+                closeAboutOverlay();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && aboutOverlay.classList.contains('active')) {
+                closeAboutOverlay();
+            }
+        });
+
+        console.log('📖 About overlay initialized');
+    }
+}
+
+function openAboutOverlay() {
+    const aboutOverlay = document.getElementById('about-overlay');
+    const body = document.body;
+
+    if (aboutOverlay) {
+        aboutOverlay.classList.add('active');
+        body.style.overflow = 'hidden'; // Prevent background scrolling
+        console.log('📖 About overlay opened');
+
+        // Play click sound
+        playClickSound();
+    }
+}
+
+function closeAboutOverlay() {
+    const aboutOverlay = document.getElementById('about-overlay');
+    const body = document.body;
+
+    if (aboutOverlay) {
+        aboutOverlay.classList.remove('active');
+        body.style.overflow = ''; // Restore scrolling
+        console.log('📖 About overlay closed');
+
+        // Play click sound
+        playClickSound();
+    }
+}
 
 // Custom Cursor Implementation - Matching Live Website
 function initializeCustomCursor() {
@@ -84,8 +150,8 @@ function createCustomCursor() {
         }
     });
 
-    // Interactive elements - exact selectors from live website
-    const interactiveElements = document.querySelectorAll('a, button, .project-box, [role="button"], .hero-link, .footer-link, .project-title');
+    // Interactive elements - exact selectors from live website + overlay elements
+    const interactiveElements = document.querySelectorAll('a, button, .project-box, [role="button"], .hero-link, .footer-link, .project-title, .about-close');
     const textElements = document.querySelectorAll('input[type="text"], input[type="email"], input[type="search"], textarea, [contenteditable="true"]');
 
     console.log('🔗 Interactive elements found:', interactiveElements.length);
@@ -151,7 +217,7 @@ function createCustomCursor() {
 
     // Reset to default when over general areas
     document.addEventListener('mouseover', (e) => {
-        const isInteractive = e.target.closest('a, button, .project-box, [role="button"], .hero-link, .footer-link, .project-title');
+        const isInteractive = e.target.closest('a, button, .project-box, [role="button"], .hero-link, .footer-link, .project-title, .about-close');
         const isText = e.target.closest('input[type="text"], input[type="email"], input[type="search"], textarea, [contenteditable="true"]');
 
         if (!isInteractive && !isText) {
@@ -239,22 +305,25 @@ function playClickSound() {
     }
 }
 
-// Enhanced Interactions - FIXED PROJECT BOX LINKS
+// Enhanced Interactions - FIXED PROJECT BOX LINKS + About Overlay
 function initializeInteractions() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
+        // Skip the about link since it's handled separately
+        if (anchor.id !== 'about-link') {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        }
     });
 
-    const interactiveElements = document.querySelectorAll('a, button, .project-box, [role="button"]');
+    const interactiveElements = document.querySelectorAll('a, button, .project-box, [role="button"], .about-close');
     interactiveElements.forEach(element => {
         element.addEventListener('mouseenter', playHoverSound);
         element.addEventListener('click', playClickSound);
