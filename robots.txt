@@ -1,0 +1,50 @@
+# robots.txt for 42piratas.com
+# Ânderson Q. - Decentralized Internet Builder, Game Designer, Writer
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://42piratas.com/sitemap.xml
+
+# Archive content - allow indexing
+Allow: /archive/
+
+# Assets - allow crawling for images and files
+Allow: /assets/
+
+# Specific important files
+Allow: /assets/img/
+Allow: /assets/cursor/
+Allow: /assets/fonts/
+
+# Block unnecessary crawling of source files
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/sounds/
+
+# Security file
+Allow: /safety.pig
+
+# Common bot directives
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Block known problematic bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Main page -->
+  <url>
+    <loc>https://42piratas.com/</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Images for SEO -->
+    <image:image>
+      <image:loc>https://42piratas.com/assets/img/42p-about-1.png</image:loc>
+      <image:title>Ânderson Q. wingsuit flying - AKASHA Foundation developer and extreme sports athlete</image:title>
+      <image:caption>Ânderson Q. wingsuit flying over scenic mountains, showcasing his adventurous spirit as a decentralized internet builder and skydiving instructor</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://42piratas.com/assets/img/42p-about-2.png</image:loc>
+      <image:title>Ânderson Q. portrait - game designer and VoteGPT creator</image:title>
+      <image:caption>Professional portrait of Ânderson Q., creator of VoteGPT, table games, and children's books, based in Florianópolis Brazil</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://42piratas.com/assets/img/42p-about-3.png</image:loc>
+      <image:title>Ânderson Q. adventure and technology professional</image:title>
+      <image:caption>Ânderson Q. combining adventure sports with technology innovation, author of Nonada and Coddiwomple books</image:caption>
+    </image:image>
+
+    <image:image>
+      <image:loc>https://42piratas.com/assets/img/hero-home.gif</image:loc>
+      <image:title>Ânderson Q. animated portrait</image:title>
+      <image:caption>Animated portrait of Ânderson Q., decentralized internet builder and creative technologist</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Archive content - individual project files -->
+  <url>
+    <loc>https://42piratas.com/archive/nonada.pdf</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://42piratas.com/archive/nonada.epub</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://42piratas.com/archive/coddiwomple.pdf</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://42piratas.com/archive/coddiwomple.epub</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://42piratas.com/archive/alex-e-o-et.pdf</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://42piratas.com/archive/capitaotheo.pdf</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://42piratas.com/archive/capitaotheo.epub</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://42piratas.com/archive/ilhadosninjas.pdf</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://42piratas.com/archive/pedropirata.pdf</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
